@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "467792775711",
+    "project_id": "explorun-348909",
+    "storage_bucket": "explorun-348909.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467792775711:android:034806cc6c76a2226e632a",
+        "android_client_info": {
+          "package_name": "com.xplorun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467792775711-6n7hakm46ic110320gvtij9iigitdomq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMkZzvgpb9w92zyUvc8N8PwIYTsw-EAXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467792775711-6n7hakm46ic110320gvtij9iigitdomq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

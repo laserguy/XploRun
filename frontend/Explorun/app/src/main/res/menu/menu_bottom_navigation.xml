@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_run"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_widgets_24"
+        android:title="@string/run"/>
+    <item
+        android:id="@+id/menu_statistics"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="@string/statistics"/>
+    <item
+        android:id="@+id/menu_user"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/user"/>
+    <item
+        android:id="@+id/plant_tree"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_tree_24"
+        android:title="@string/plant_tree"/>
+</menu>

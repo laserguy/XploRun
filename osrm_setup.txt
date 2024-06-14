@@ -1,0 +1,93 @@
+Required OS: Ubuntu 22.04 (WSL also works)
+
+Hardware: 16GB RAM and 4 Cores, otherwise compile and osrm-extract will fail
+
+# Steps to build from source:
+
+[https://github.com/Project-OSRM/osrm-backend#building-from-source](https://github.com/Project-OSRM/osrm-backend#building-from-source)
+
+1. Install required dependencies
+    
+    ```bash
+    sudo apt update
+    sudo apt dist-upgrade -y
+    sudo apt install build-essential git cmake pkg-config \
+    libbz2-dev libxml2-dev libzip-dev libboost-all-dev \
+    lua5.2 liblua5.2-dev libtbb-dev -y
+    ```
+    
+2. Clone and build
+    
+    ```bash
+    git clone https://github.com/Project-OSRM/osrm-backend
+    cd osrm-backend
+    mkdir -p build
+    cd build
+    cmake ..
+    cmake --build .
+    sudo cmake --build . --target install
+    #note where foot profile is installed
+    ```
+    
+
+### Running OSRM routing service
+
+1. Download local map
+    
+    ```bash
+    mkdir ~/osrm
+    cd ~/osrm
+    wget http://download.geofabrik.de/europe/germany/bayern-latest.osm.pbf
+    ```
+    
+2. Extract the map with a foot profile.
+    
+    ```bash
+    # while installing look for where profile is installed.
+    osrm-extract -p /usr/local/share/osrm/profiles/foot.lua ./bayern-latest.osm.pbf
+    ```
+    
+3. Optimize the map
+    
+    ```bash
+    osrm-partition ./bayern-latest.osrm
+    osrm-customize ./bayern-latest.osrm
+    ```
+    
+4. Run
+    
+    ```bash
+    # max-matching-size is max number of locations in query, 
+    # for bigger routes default 100 is not enough 
+    osrm-routed  ./bayern-latest.osrm -p 6000 --max-matching-size 500 --algorithm mld
+    ```
+    
+
+# Running in Docker
+
+1. Download the map
+    
+    ```bash
+    mkdir ~/osrm
+    cd ~/osrm
+    wget http://download.geofabrik.de/europe/germany/bayern-latest.osm.pbf
+    ```
+    
+2. Extract the map
+    
+    ```bash
+    docker run -t -v "${PWD}:/data" osrm/osrm-backend osrm-extract -p /opt/foot.lua /data/bayern-latest.osm.pbf
+    ```
+    
+3. Optimize the map
+    
+    ```bash
+    docker run -t -v "${PWD}:/data" osrm/osrm-backend osrm-partition /data/bayern-latest.osrm
+    docker run -t -v "${PWD}:/data" osrm/osrm-backend osrm-customize /data/bayern-latest.osrm
+    ```
+    
+4. Run
+    
+    ```bash
+    docker run -t -i -p 6000:5000 -v "${PWD}:/data" osrm/osrm-backend osrm-routed -m --max-matching-size 500 --algorithm mld /data/bayern-latest.osrm
+    ```

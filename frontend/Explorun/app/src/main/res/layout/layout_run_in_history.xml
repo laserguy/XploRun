@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_run_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sample time"
+        style="@style/H3text" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="24dp"
+        android:theme="@style/RunHistoryTable"
+        android:layout_height="wrap_content">
+
+        <TableRow android:layout_marginBottom="2dp">
+
+            <TextView
+
+                android:text="Distance:" />
+
+            <TextView
+
+                android:text="Calories: " />
+
+            <TextView
+
+                android:text="Time taken: " />
+        </TableRow>
+
+        <TableRow
+            android:theme="@style/RunHistoryValueEntry"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:id="@+id/text_distance"
+                android:text="x" />
+
+            <TextView
+                android:id="@+id/text_kcal"
+                android:text="x" />
+
+            <TextView
+                android:id="@+id/text_time_taken"
+                android:text="x" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

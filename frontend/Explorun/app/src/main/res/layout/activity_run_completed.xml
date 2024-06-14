@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xplorun.RunCompletedActivity">
+
+    <TextView
+        android:id="@+id/text_title_analysis"
+        style="@style/H1text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Run analysis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart_run_analysis"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@id/table_stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title_analysis" />
+
+    <TableLayout
+        android:id="@+id/table_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_feedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart_run_analysis">
+
+        <TableRow android:theme="@style/TableElement">
+
+            <TextView android:text="Elevation gain:" />
+
+            <TextView
+                android:id="@+id/text_elevation"
+                style="@style/TableElement"
+                android:text="0" />
+        </TableRow>
+
+        <TableRow android:theme="@style/TableElement">
+
+            <TextView android:text="Distance:" />
+
+            <TextView
+                android:id="@+id/text_distance"
+                style="@style/TableElement"
+                android:text="0" />
+        </TableRow>
+
+        <TableRow android:theme="@style/TableElement">
+
+            <TextView android:text="Time taken:" />
+
+            <TextView
+                android:id="@+id/text_time"
+                style="@style/TableElement"
+                android:text="0" />
+        </TableRow>
+
+        <TableRow android:theme="@style/TableElement">
+
+            <TextView android:text="Calories burned:" />
+
+            <TextView
+                android:id="@+id/text_calories"
+                style="@style/TableElement"
+                android:text="0" />
+        </TableRow>
+
+        <TableRow android:theme="@style/TableElement">
+
+            <TextView android:text="Average speed:" />
+
+            <TextView
+                android:id="@+id/text_avg_speed"
+                style="@style/TableElement"
+                android:text="0" />
+        </TableRow>
+
+        <TableRow android:theme="@style/TableElement">
+
+            <TextView android:text="Top speed:" />
+
+            <TextView
+                android:id="@+id/text_top_speed"
+                style="@style/TableElement"
+                android:text="0" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/text_feedback"
+        style="@style/H1text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Please rate your run"
+        app:layout_constraintBottom_toTopOf="@id/toggle_feedback"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/button_dislike"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dislike"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="406dp" />
+
+        <Button
+            android:id="@+id/button_like"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Like" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

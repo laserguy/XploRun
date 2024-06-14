@@ -1,0 +1,92 @@
+{
+  "0": {
+    "id": 0,
+    "title": "Starting out",
+    "tip": "To avoid injury and enjoy the experience, it's essential to ease yourself into running slowly and increase your pace and distance gradually over several outings."
+  },
+  "1": {
+    "id": 1,
+    "title": "Warm up",
+    "tip": "Start each run with a gentle warm up of at least 5 minutes. This can include quick walking, marching on the spot, knee lifts, side stepping and climbing stairs. A warm up will help increase blood flow to muscles, increase muscle suppleness and prevent unnecessary stress and fatigue being placed on your heart, lungs and muscles."
+  },
+  "2": {
+    "id": 2,
+    "title": "Walk at first",
+    "tip": "Start walking for an amount of time that feels comfortable (anywhere from 10 to 30 minutes). Once you can walk for 30 minutes easily, include some running intervals of one to 2 minutes into your walking at a speed that feels comfortable. As time goes on, make the running intervals longer, until you're running for 30 minutes continuously."
+  },
+  "3": {
+    "id": 3,
+    "title": "Run with style",
+    "tip": "Run with your arms and shoulders relaxed, and elbows bent. Keep an upright posture and a smooth running stride, striking the ground from heel to toe."
+  },
+  "4": {
+    "id": 4,
+    "title": "Cool down",
+    "tip": "Give yourself a few minutes to cool down (to bring your heartbeat back to normal) after each run by walking followed by gently stretching your leg muscles."
+  },
+  "5": {
+    "id": 5,
+    "title": "Get into a pattern",
+    "tip": "Regular running for beginners means getting out at least twice a week. Your running will improve as your body adapts to the consistent training stimulus. It's better to run twice a week, every week, than to run 6 times one week and then do no running for the next 3 weeks."
+  },
+  "6": {
+    "id": 6,
+    "title": "Set yourself a goal",
+    "tip": "Whatever your level, setting goals is important to stay focused and motivated. Make your goals realistic to avoid becoming demoralised. Training for a race, fun-run or a charity run is a good way to keep going."
+  },
+  "7": {
+    "id": 7,
+    "title": "Run with a friend",
+    "tip": "It really helps to have someone about the same level of ability as you to run with. You'll encourage each other when you're not so keen to run. You'll feel you don't want to let your running partner down, and this will help motivate you."
+  },
+  "8": {
+    "id": 8,
+    "title": "Plan ahead",
+    "tip": "Get your joggers or workout clothes out the night before so you are ready to go. The less you can think about it when about to start an exercise session - the less likely you will change your mind."
+  },
+  "9": {
+    "id": 9,
+    "title": "Keep a diary",
+    "tip": "Keep a diary of your runs. Note down each run, including your route, distance, time, weather conditions and how you felt. That way, whenever your motivation is flagging, you can look back and be encouraged by how much you've improved."
+  },
+  "10": {
+    "id": 10,
+    "title": "Mix it up",
+    "tip": "Keep your running interesting by adding variety. Running the same route over and over again can become boring. Vary your distances and routes. Try adding bursts of jogging to your usual walk or if you are already jogging try adding short sprint intervals. This will increase your metabolic rate for the next 24-48 hours and achieve greater health and fitness benefits."
+  },
+  "11": {
+    "id": 11,
+    "title": "Join a club",
+    "tip": "A running club is the perfect way to commit to running regularly. Most clubs have running groups for different levels, including beginners. Clubs are also a great way to find running partners to run with outside of club sessions."
+  },
+  "12": {
+    "id": 12,
+    "title": "\"Run, Forrest, run!\"",
+    "tip": "Forest, city, jungle or park, Explorun suggests routes tailor-made for your preferences."
+  },
+  "13": {
+    "id": 13,
+    "title": "Stay tuned",
+    "tip": "Route optimization based on number of beer checkpoints coming soon."
+  },
+  "14": {
+    "id": 14,
+    "title": "Visiting London?",
+    "tip": "Don't forget to look on the other side when crossing the street!"
+  },
+  "15": {
+    "id": 15,
+    "title": "Stay safe",
+    "tip": "Afraid of bear attack during your runs? Simply set your nature preference to a lower level."
+  },
+  "16": {
+    "id": 16,
+    "title": "What's taking so long?",
+    "tip": "Our engineers are running as fast as they can to make sure the routes we're suggesting are perfect."
+  },
+  "17": {
+    "id": 17,
+    "title": "Encountered a bug?",
+    "tip": "If you prefer running in nature, there's a good chance of meeting one. Don't forget to take a picture!"
+  }
+}

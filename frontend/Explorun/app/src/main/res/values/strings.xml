@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">XploRun</string>
+    <string name="hello">Hello</string>
+
+    <string name="suggestions">These routes should be perfect for you:</string>
+    <string name="map">Map</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet</string>
+    <string name="lorem_x">21.4</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log in</string>
+    <string name="set_your_preferences">Set your preferences:</string>
+    <string name="uniqueness">Uniqueness</string>
+    <string name="length">Length</string>
+    <string name="elevation">Elevation</string>
+    <string name="pedestrian_friendliness">Pedestrian friendliness</string>
+    <string name="nature_cover">Nature cover</string>
+    <string name="set_preferences">Set preferences</string>
+    <string name="start_run">Start run</string>
+    <string name="hello_username">Hello [username]!</string>
+    <string name="nearby_routes">Nearby routes</string>
+    <string name="custom_routes">Custom routes</string>
+    <string name="not_channel">Active Run</string>
+    <string name="run">Run</string>
+    <string name="ssml">
+        <![CDATA[
+<speak xmlns=\"http://www.w3.org/2001/10/synthesis\"
+        xmlns:mstts=\"http://www.w3.org/2001/mstts\"
+        xmlns:emo=\"http://www.w3.org/2009/10/emotionml\" version=\"1.0\" xml:lang=\"en-US\">
+    <voice name=\"{0}\">
+        <mstts:express-as style=\"{1}\">{2}</mstts:express-as>
+    </voice>
+</speak>
+]]>
+    </string>
+    <string name="osrm_custom_direction20">Merge left[ on %s]</string>
+    <string name="osrm_custom_direction21">Merge right[ on %s]</string>
+    <string name="osrm_custom_direction22">Merge straight[ on %s]</string>
+    <string name="osrm_custom_direction24">Depart</string>
+    <string name="osrm_custom_direction25">Arrive</string>
+    <string name="challenges">Challenges</string>
+    <string name="statistics">Statistics</string>
+    <string name="user">User</string>
+    <string name="explorun">Explorun</string>
+    <string name="recommended_routes">Recommended routes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wrong_direction">Wrong direction!</string>
+    <string name="reached_destination">You have reached your destination!</string>
+    <string name="user_profile_and_settings"><![CDATA[User profile &\nsettings:]]></string>
+    <string name="hello_user">Hello user!</string>
+    <string name="gender">Gender:</string>
+    <string name="age">Age:</string>
+    <string name="height">Height:</string>
+    <string name="weight">Weight:</string>
+    <string name="your_badges">Your badges:</string>
+    <string name="settings">Settings:</string>
+    <string name="feedback_prompt">Is your run finished? Give it a rating please, so we can improve your future suggestions!</string>
+    <string name="like">Like</string>
+    <string name="dislike">Dislike</string>
+    <string name="cancel">Cancel</string>
+
+<!--    Badges-->
+    <string name="nature">Nature</string>
+    <string name="forrest_gump">Forrest Gump</string>
+    <string name="high_intensity">High Intensity</string>
+    <string name="mountaineer">Mountaineer</string>
+    <string name="lazy">Lazy</string>
+    <string name="surrender">Surrender</string>
+    <string name="crawler">Crawler</string>
+    <string name="challenge_completed">Challenge completed</string>
+
+    <!-- Badges -->
+    <string name="nature_badge_desc">You covered more than 10 km in nature.</string>
+    <string name="forrest_gump_badge_desc">You spent more than 10 hours running.</string>
+    <string name="high_intensity_badge_desc">Your average pace was higher than 16 km/h.</string>
+    <string name="mountaineer_badge_desc">You covered more than 1 km elevation.</string>
+    <string name="lazy_badge_desc">You ran less than 7 km this week.</string>
+    <string name="surrender_badge_desc">You canceled a run.</string>
+    <string name="crawler_badge_desc">You didn\'t reach your overall average running speed this week.</string>
+    <string name="challenge_completed_badge_desc">You completed the challenge of the week.</string>
+    <string name="best_pace">Best pace:</string>
+    <string name="total_distance">Total distance:</string>
+    <string name="total_calories_burned">Total calories burned:</string>
+    <string name="distance_in_nature">Distance in nature:</string>
+    <string name="distance_in_urban">Distance in urban:</string>
+    <string name="longest_distance">Longest distance:</string>
+    <string name="xp">XP:</string>
+    <string name="overall_analysis">Overall analysis:</string>
+    <string name="run_history">Run history:</string>
+    <string name="weekly_stats">Weekly stats:</string>
+    <string name="distance">Distance:</string>
+    <string name="calories">Calories:</string>
+    <string name="asset_statements" translatable="false">[ {   \"relation\": [\"delegate_permission/common.handle_all_urls\"],   \"target\": {     \"namespace\": \"android_app\",     \"package_name\": \"com.xplorun\",     \"sha256_cert_fingerprints\": [ \t\t\"CF:16:39:79:88:6C:B4:3B:57:57:59:E5:38:8E:39:C1:43:94:3C:5C:97:F2:D3:1C:B4:C7:08:64:BB:6A:11:4A\", \t\t\"6B:DC:FD:6B:73:06:C2:F6:08:92:77:59:24:86:C3:AB:42:9F:DE:65:8F:0A:70:75:09:43:1D:82:E9:33:76:4B\", \t\t\"E3:4C:C5:67:A9:FB:D2:2C:6F:B8:C7:F4:14:F9:EA:5E:B5:BF:0A:DC:15:C0:52:2E:16:82:65:60:6C:53:EA:5F\" \t]   } } ]</string>
+    <string name="plant_tree">Tree</string>
+
+</resources>

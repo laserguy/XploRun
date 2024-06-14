@@ -1,0 +1,17 @@
+##### VERY IMPORTANT #########
+# This docker is only for the purpose for cron-server
+# Since two Dockerfiles cannot exists in the same folder, I created Dockerfile.dev for cron-server
+# This is only for the local Kubernetes Cluster or the GCP
+# Don't use it for the local docker deployments, for that use docker folder(check init.py script)
+
+FROM python:3.10.6-alpine3.15
+
+COPY ./docker/cron-server/requirements.txt /app/requirements.txt
+WORKDIR "/app"
+
+COPY ./backend ./
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+CMD ["python","cron_server.py"]

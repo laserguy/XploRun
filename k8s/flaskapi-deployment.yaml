@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapi-deployment
+  labels:
+    app: flaskapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskapi
+  template:
+    metadata:
+      labels:
+        app: flaskapi
+    spec:
+      securityContext:
+        runAsUser: 0
+        fsGroup: 0
+      containers:
+        - name: service-main
+          image: mahtovivek741/k8-service-main
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          securityContext:
+            capabilities:
+              add: ["SYS_ADMIN"]
+          env:
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: flaskapi-secrets
+                  key: db_root_password
+            - name: DB_NAME
+              value: 'explorun'
+            - name: DB_USER_NAME
+              value: 'root'
+            - name: DB_PORT
+              value: '3306'
+            - name: DB_SERVER
+              value: mysql
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-service
+spec:
+  ports:
+    - port: 6000
+      protocol: TCP
+      targetPort: 5000
+  selector:
+    app: flaskapi
+  type: LoadBalancer

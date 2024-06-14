@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/layout_user_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xplorun.UserFragment">
+
+    <ScrollView
+        android:paddingTop="@dimen/default_padding"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"
+        android:scrollbarStyle="outsideInset"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_title"
+                style="@style/H1text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/ic_baseline_account_circle_24"
+                app:layout_constraintBottom_toTopOf="@+id/text_weekly_stats"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+            <TextView
+                android:id="@+id/text_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:maxLines="1"
+                android:text="@string/lorem_ipsum"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toTopOf="@+id/table_user_details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+            <TableLayout
+                android:id="@+id/table_user_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="32dp"
+                android:theme="@style/UserDetailsTable"
+                app:layout_constraintBottom_toTopOf="@+id/text_weekly_stats"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/text_user_name">
+
+                <TableRow>
+
+                    <TextView android:text="@string/gender" />
+
+                    <TextView android:id="@+id/text_gender" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="@string/age" />
+
+                    <TextView android:id="@+id/text_age" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="@string/height" />
+
+                    <TextView android:id="@+id/text_height" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="@string/weight" />
+
+                    <TextView android:id="@+id/text_weight" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/text_weekly_stats"
+                style="@style/H1text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Weekly statistics"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TableLayout
+                android:id="@+id/table_weekly_stats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:theme="@style/OverallAnalysisTable"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_weekly_stats">
+
+                <TableRow>
+
+                    <TextView android:text="@string/distance" />
+
+                    <TextView
+                        android:id="@+id/text_weekly_distance"
+                        android:layout_marginLeft="16dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="@string/calories" />
+
+                    <TextView
+                        android:id="@+id/text_weekly_cals"
+                        android:layout_marginLeft="16dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView android:text="@string/xp" />
+
+                    <TextView
+                        android:id="@+id/text_weekly_xp"
+                        android:layout_marginLeft="16dp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart_weekly_distance"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_weekly_stats" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart_weekly_cals"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chart_weekly_distance" />
+
+            <TextView
+                android:id="@+id/text_badges"
+                style="@style/H1text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Your badges this week"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chart_weekly_cals" />
+
+            <LinearLayout
+                android:id="@+id/layout_badges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_badges"></LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_badges"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="32dp"
+                android:text="Logout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
